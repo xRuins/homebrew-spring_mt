@@ -35,11 +35,6 @@ class Mysql56WithQ4m < Formula
   conflicts_with 'mysql-connector-c',
     :because => 'both install MySQL client libraries'
 
-  fails_with :llvm do
-    build 2326
-    cause "https://github.com/Homebrew/homebrew/issues/issue/144"
-  end
-
   def install
     # Don't hard-code the libtool path. See:
     # https://github.com/Homebrew/homebrew/issues/20185
